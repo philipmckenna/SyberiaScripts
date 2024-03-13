@@ -25,7 +25,13 @@ class MedContainerSmall: Container_Base
     rotationFlags=17;
     weight=140;
     itemSize[]={3,3};
-    itemsCargoSize[]={6,6};
+    itemsCargoSize[]={4,4};
+    inventorySlot[]=
+        {
+            "Belt_Left",
+            "VestGrenadeA",
+            "VestGrenadeC"
+        };
     allowOwnedCargoManipulation=1;
     randomQuantity=2;
     canBeDigged=1;
@@ -60,7 +66,7 @@ class MedContainerMedium: Container_Base
     rotationFlags=17;
     weight=250;
     itemSize[]={4,4};
-    itemsCargoSize[]={8,8};
+    itemsCargoSize[]={6,6};
     allowOwnedCargoManipulation=1;
     randomQuantity=2;
     canBeDigged=1;
@@ -95,7 +101,7 @@ class MedContainerLarge: Container_Base
     rotationFlags=17;
     weight=500;
     itemSize[]={5,5};
-    itemsCargoSize[]={10,10};
+    itemsCargoSize[]={8,8};
     allowOwnedCargoManipulation=1;
     randomQuantity=2;
     canBeDigged=1;

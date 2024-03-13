@@ -225,14 +225,14 @@ class PerksCollection
         Register(SyberiaPerkType.SYBPERK_STRENGTH_JUMP_STAMINA_DEC, "%").AddUnlockValue(3, 20).AddUnlockValue(24, 30).AddUnlockValue(40, 40).AddUnlockValue(54, 50).AddUnlockValue(68, 60).AddUnlockValue(79, 70).AddUnlockValue(90, 80);
         Register(SyberiaPerkType.SYBPERK_STRENGTH_BLOCK_STAMINA_DEC, "%").AddUnlockValue(3, 20).AddUnlockValue(24, 30).AddUnlockValue(40, 40).AddUnlockValue(54, 50).AddUnlockValue(68, 60).AddUnlockValue(79, 70).AddUnlockValue(90, 80);
         
-        Register(SyberiaPerkType.SYBPERK_STRENGTH_FAST_ATTACK_STAMINA_DEC, "%").AddUnlockValue(5, 20).AddUnlockValue(28, 30).AddUnlockValue(43, 40).AddUnlockValue(58, 50).AddUnlockValue(70, 60).AddUnlockValue(82, 70).AddUnlockValue(93, 80);
-        Register(SyberiaPerkType.SYBPERK_STRENGTH_FAST_ATTACK_STRENGTH, "%").AddUnlockValue(5, 20).AddUnlockValue(28, 30).AddUnlockValue(43, 40).AddUnlockValue(58, 50).AddUnlockValue(70, 60).AddUnlockValue(82, 70).AddUnlockValue(93, 80);
+        Register(SyberiaPerkType.SYBPERK_STRENGTH_FAST_ATTACK_STAMINA_DEC, "%").AddUnlockValue(8, 20).AddUnlockValue(28, 30).AddUnlockValue(43, 40).AddUnlockValue(58, 50).AddUnlockValue(70, 60).AddUnlockValue(82, 70).AddUnlockValue(93, 80);
+        Register(SyberiaPerkType.SYBPERK_STRENGTH_FAST_ATTACK_STRENGTH, "%").AddUnlockValue(8, 20).AddUnlockValue(28, 30).AddUnlockValue(43, 40).AddUnlockValue(58, 50).AddUnlockValue(70, 60).AddUnlockValue(82, 70).AddUnlockValue(93, 80);
         
         Register(SyberiaPerkType.SYBPERK_STRENGTH_HEAVY_ATTACK_STAMINA_DEC, "%").AddUnlockValue(12, 20).AddUnlockValue(32, 30).AddUnlockValue(47, 40).AddUnlockValue(62, 50).AddUnlockValue(73, 60).AddUnlockValue(85, 70).AddUnlockValue(97, 80);
         Register(SyberiaPerkType.SYBPERK_STRENGTH_HEAVY_ATTACK_STRENGTH, "%").AddUnlockValue(12, 20).AddUnlockValue(32, 30).AddUnlockValue(47, 40).AddUnlockValue(62, 50).AddUnlockValue(73, 60).AddUnlockValue(85, 70).AddUnlockValue(97, 80);
         
         Register(SyberiaPerkType.SYBPERK_STRENGTH_KNOCKOUT_HEAVY_ITEMS).AddUnlockValue(100, 1);
-        Register(SyberiaPerkType.SYBPERK_STRENGTH_HEAVY_ITEMS).AddUnlockValue(8, 1);
+        Register(SyberiaPerkType.SYBPERK_STRENGTH_HEAVY_ITEMS).AddUnlockValue(5, 1);
         
 		
         //
@@ -246,7 +246,7 @@ class PerksCollection
 
 		Register(SyberiaPerkType.SYBPERK_MEDICINE_SHOW_PLAYER_STATE).AddUnlockValue(20, 1);
         Register(SyberiaPerkType.SYBPERK_MEDICINE_TABLETS_RESEARCH).AddUnlockValue(25, 1);
-        Register(SyberiaPerkType.SYBPERK_MEDICINE_BRING_FROM_UNCUNSION).AddUnlockValue(40, 1);
+        Register(SyberiaPerkType.SYBPERK_MEDICINE_BRING_FROM_UNCUNSION).AddUnlockValue(10, 1);
         Register(SyberiaPerkType.SYBPERK_MEDICINE_AMPOULES_RESEARCH).AddUnlockValue(50, 1);
         Register(SyberiaPerkType.SYBPERK_MEDICINE_DEATH_CAUSE).AddUnlockValue(60, 1);
         Register(SyberiaPerkType.SYBPERK_MEDICINE_INJECTORS_RESEARCH).AddUnlockValue(75, 1);     
@@ -284,8 +284,8 @@ class PerksCollection
         //Register(SyberiaPerkType.SYBPERK_SURVIVAL_BERRIES_RESEARCH).AddUnlockValue(10, 1);
         //Register(SyberiaPerkType.SYBPERK_SURVIVAL_MUSHROOMS_RESEARCH).AddUnlockValue(25, 1);
 		
-        Register(SyberiaPerkType.SYBPERK_SURVIVAL_HANDDRILL_USE).AddUnlockValue(30, 1);
-        Register(SyberiaPerkType.SYBPERK_SURVIVAL_DIG_ITEMS).AddUnlockValue(50, 1);
+        Register(SyberiaPerkType.SYBPERK_SURVIVAL_HANDDRILL_USE).AddUnlockValue(4, 1);
+        Register(SyberiaPerkType.SYBPERK_SURVIVAL_DIG_ITEMS).AddUnlockValue(10, 1);
         Register(SyberiaPerkType.SYBPERK_SURVIVAL_START_LOADOUT).AddUnlockValue(100, 1);
 		// 75 reserved
         

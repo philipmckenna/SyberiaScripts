@@ -88,11 +88,10 @@ class Animal_UrsusArctos: AnimalBase
 
 class DeadChicken_ColorBase: Edible_Base
 {
-    storageCategory=3;
     knifeDamageModifier=0.25;
     class Cargo
     {
-        itemsCargoSize[]={10,4};
+        itemsCargoSize[]={};
         allowOwnedCargoManipulation=1;
         openable=0;
     };
@@ -107,7 +106,7 @@ class DeadChicken_ColorBase: Edible_Base
         class ObtainedFeathers
         {
             item="ChickenFeather";
-            count=0;
+            count=10;
             quantityMinMaxCoef[]={0.5,1};
             transferToolDamageCoef=1;
         };

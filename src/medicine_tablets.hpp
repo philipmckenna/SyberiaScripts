@@ -181,8 +181,8 @@ class TabletsParacetamol : TabletsBase
     medPainkillerLevel=1;
     medPainkillerTimeSec=1000;
     medAntibioticLevel=1;
-    medAntibioticsTimeSec=200;
-    medAntibioticsStrength = 0.5;
+    medAntibioticsTimeSec=300;
+    medAntibioticsStrength = 1;
     overdosedIncrement=0.15;
     hiddenSelectionsTextures[]=
     {

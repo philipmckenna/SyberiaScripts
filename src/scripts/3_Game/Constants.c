@@ -286,52 +286,47 @@ ref SyberiaConfig GetSyberiaConfig()
 modded class PlayerConstants
 {
 	static const float CHANCE_TO_BLEED_SLIDING_LADDER_PER_SEC = 0.1; // probability of bleeding source occuring while sliding down ladder without gloves given as percentage per second(0.5 means 50% chance bleeding source will happen every second while sliding down) 
-	static const float GLOVES_DAMAGE_SLIDING_LADDER_PER_SEC = -0.5;// how much damage the gloves receive while sliding down the ladder (per sec)
+	static const float GLOVES_DAMAGE_SLIDING_LADDER_PER_SEC = 0.5;// how much damage the gloves receive while sliding down the ladder (per sec)
 
 	static const float BAREFOOT_MOVEMENT_BLEED_MODIFIER = 0.05;
-	static const float SHOES_MOVEMENT_DAMAGE_PER_STEP = 0.003;
+	static const float SHOES_MOVEMENT_DAMAGE_PER_STEP = 0.08;
 	
-	static const float BLEEDING_SOURCE_BLOODLOSS_PER_SEC = -0.5;
-	static const float BLOOD_REGEN_RATE_PER_SEC	= 0.05; //base amount of blood regenerated per second 
+	static const float BLEEDING_SOURCE_BLOODLOSS_PER_SEC = -10;
+	static const float BLOOD_REGEN_RATE_PER_SEC	= 0.10; //base amount of blood regenerated per second 
 	
-	static const float LOW_ENERGY_DAMAGE_PER_SEC			= 0.03;	//health loss per second while low on energy
-	static const float LOW_WATER_DAMAGE_PER_SEC				= 0.04;	//health loss per second while low on water
+	static const float LOW_ENERGY_DAMAGE_PER_SEC			= 0.04;	//health loss per second while low on energy          0.03
+	static const float LOW_WATER_DAMAGE_PER_SEC				= 0.06;	//health loss per second while low on water       0.04
 	
-	static const float HEALTH_REGEN_MIN	= 0.002;	//health regen rate at BLOOD_THRESHOLD_FATAL blood level
-	static const float HEALTH_REGEN_MAX	= 0.01;	//health regen rate at MAXIMUM blood level
+	static const float HEALTH_REGEN_MIN	= 0.005;	//health regen rate at BLOOD_THRESHOLD_FATAL blood level
+	static const float HEALTH_REGEN_MAX	= 0.02;	//health regen rate at MAXIMUM blood level
 	
-	static const float SHOCK_REFILL_CONSCIOUS_SPEED			= 0.8;		//shock refill speed when the player is conscious
-	static const float SHOCK_REFILl_UNCONSCIOUS_SPEED		= 0.28;		//shock refill speed when the player is unconscious
+	static const float SHOCK_REFILL_CONSCIOUS_SPEED			= 2;		//shock refill speed when the player is conscious
+	static const float SHOCK_REFILl_UNCONSCIOUS_SPEED		= 0.7;		//shock refill speed when the player is unconscious
 	
 	
 	// Metabolic
-	static const float SL_ENERGY_CRITICAL = 0;
-	static const float SL_ENERGY_LOW = 1000;
-	static const float SL_ENERGY_NORMAL = 2000;
-	static const float SL_ENERGY_HIGH = 2800;
-	static const float LOW_ENERGY_THRESHOLD = 0.01;
+
+	static const float LOW_ENERGY_THRESHOLD = 0.01;  //Threshold for health loss
 	
-	static const float METABOLIC_SPEED_ENERGY_BASAL		= 0.01;		//energy loss per second while idle	
-	static const float METABOLIC_SPEED_ENERGY_WALK		= 0.02;		//energy loss per second
-	static const float METABOLIC_SPEED_ENERGY_JOG		= 0.10;		//energy loss per second
-	static const float METABOLIC_SPEED_ENERGY_SPRINT	= 0.20;		//energy loss per second
+	static const float METABOLIC_SPEED_ENERGY_BASAL		= 0.05;		//energy loss per second while idle	
+	static const float METABOLIC_SPEED_ENERGY_WALK		= 0.07;		//energy loss per second
+	static const float METABOLIC_SPEED_ENERGY_JOG		= 0.2;		//energy loss per second
+	static const float METABOLIC_SPEED_ENERGY_SPRINT	= 0.5;		//energy loss per second
+	static const float SALINE_BLOOD_REGEN_PER_SEC			= 0; 	//boost for blood regen per second, independent on BLOOD_REGEN_SPEED
 	
 	// Water
-	static const float SL_WATER_CRITICAL = 0;
-	static const float SL_WATER_LOW = 500;
-	static const float SL_WATER_NORMAL = 1000;
-	static const float SL_WATER_HIGH = 1300;
-	static const float LOW_WATER_THRESHOLD = 0.01;
 
-	static const float METABOLIC_SPEED_WATER_BASAL		= 0.01;		//water loss per second while idle	
-	static const float METABOLIC_SPEED_WATER_WALK		= 0.03;		//water loss per second
-	static const float METABOLIC_SPEED_WATER_JOG		= 0.15;		//water loss per second
-	static const float METABOLIC_SPEED_WATER_SPRINT		= 0.30;		//water loss per second
+	static const float LOW_WATER_THRESHOLD = 0.01;	//Threshold for health loss
+
+	static const float METABOLIC_SPEED_WATER_BASAL		= 0.05;		//water loss per second while idle	
+	static const float METABOLIC_SPEED_WATER_WALK		= 0.07;		//water loss per second
+	static const float METABOLIC_SPEED_WATER_JOG		= 0.2;		//water loss per second
+	static const float METABOLIC_SPEED_WATER_SPRINT		= 0.7;		//water loss per second           0.5
 	
-	static const float HEALTH_LOSS_HC_PLUS_LOW				= 0.01;
-	static const float HEALTH_LOSS_HC_PLUS_HIGH				= 0.05;			
-	static const float HEALTH_LOSS_HC_MINUS_LOW				= 0.05;
-	static const float HEALTH_LOSS_HC_MINUS_HIGH 			= 0.10;	
+	static const float HEALTH_LOSS_HC_PLUS_LOW				= 0.04;
+	static const float HEALTH_LOSS_HC_PLUS_HIGH				= 0.08;			
+	static const float HEALTH_LOSS_HC_MINUS_LOW				= 0.04;
+	static const float HEALTH_LOSS_HC_MINUS_HIGH 			= 0.08;	
 };
 
 modded class GameConstants
@@ -354,9 +349,9 @@ modded class GameConstants
 	const float STAMINA_DRAIN_HOLD_BREATH_DURATION = 1.0; //in seconds, time it takes to increase stamina drain from STAMINA_DRAIN_HOLD_BREATH_START to STAMINA_DRAIN_HOLD_BREATH_END
 	const float	STAMINA_DRAIN_HOLD_BREATH_EXPONENT = 4.0; //holding breath exponent
 	
-	const int 	STAMINA_GAIN_JOG_PER_SEC = 1.0; //in units (how much of stamina units is gained while jogging)
-	const int 	STAMINA_GAIN_WALK_PER_SEC = 1.5; //in units (how much of stamina units is gained while walking)
-	const int 	STAMINA_GAIN_IDLE_PER_SEC = 4; //in units (how much of stamina units is gained while iddling)
+	const int 	STAMINA_GAIN_JOG_PER_SEC = 1.5; //in units (how much of stamina units is gained while jogging)
+	const int 	STAMINA_GAIN_WALK_PER_SEC = 2; //in units (how much of stamina units is gained while walking)
+	const int 	STAMINA_GAIN_IDLE_PER_SEC = 3; //in units (how much of stamina units is gained while iddling)
 	const int	STAMINA_GAIN_SWIM_PER_SEC = 0.8; //in units (how much of stamina units is gained while slowly swim)
 	const int	STAMINA_GAIN_LADDER_PER_SEC = 0.8; //in units (how much of stamina units is gained while slowly swim)
 	const float STAMINA_GAIN_BONUS_CAP = 0.01; //in units (tells how much extra units can be added at best to stamina regain)
@@ -379,13 +374,27 @@ modded class GameConstants
 	const float STAMINA_SYNC_RATE = 1; //in secs
 	const float STAMINA_MAX = 100;
 	
-	const float TEMPERATURE_RATE_COOLING_INSIDE = -0.18;
-	const float TEMPERATURE_RATE_COOLING_GROUND = -0.20;
+	const float TEMPERATURE_RATE_COOLING_INSIDE = -0.15;
+	const float TEMPERATURE_RATE_COOLING_GROUND = -0.25;
 	const float TEMPERATURE_RATE_COOLING_PLAYER = 0; // disabled for correct calculation
 	const float ENVIRO_ITEM_HEAT_TRANSFER_COEF = 0.025;
-	const float TEMPERATURE_ITEM_HEAT_TRANSFER_COEF = 0.05;
+	const float TEMPERATURE_ITEM_HEAT_TRANSFER_COEF = 0.18;
+	const float ENVIRO_WATER_TEMPERATURE_COEF 			= 1;		//! how many time is water colder than air
 	const float TEMPERATURE_ITEMS_HEAT_IN_INVENTORY_FROM_BODY = 26;
 	const float ENVIRO_FIRE_INCREMENT = 0.001;	
 	const float ENVIRO_DRY_INCREMENT = 0.000005;
-	const float ENVIRO_WIND_EFFECT = 0.05;
+	const float ENVIRO_WIND_EFFECT = 0;
+
+	const float DECAY_FOOD_RAW_MEAT = 5400;              // 10800
+	const float DECAY_FOOD_RAW_CORPSE = 7200;                  //14400
+	const float DECAY_FOOD_RAW_FRVG = 7200;                      //18000
+	const float DECAY_FOOD_BOILED_MEAT = 10800;                   //21600
+	const float DECAY_FOOD_BOILED_FRVG = 14400;                 //28800
+	const float DECAY_FOOD_BAKED_MEAT = 14400;              //28800
+	const float DECAY_FOOD_BAKED_FRVG = 18000;              //36000
+	const float DECAY_FOOD_DRIED_MEAT = 21600;                  //43200
+	const float DECAY_FOOD_CAN_OPEN = 10800;                     //21600
+	const int DECAY_FOOD_FRVG_DRIED_CHANCE = 0;
+	const float DECAY_RATE_ON_PLAYER = 1;
+
 };

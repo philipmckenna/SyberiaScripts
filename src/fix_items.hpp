@@ -10,9 +10,9 @@ class Matchbox : Inventory_Base {
     stackedUnit = "units";
     canBeSplit = 0;
     quantityBar = 0;
-    varQuantityInit = 36.0;
+    varQuantityInit = 20.0;
     varQuantityMin = 0.0;
-    varQuantityMax = 36.0;
+    varQuantityMax = 20.0;
 };
 
 class PersonalRadio : Transmitter_Base {
@@ -26,15 +26,16 @@ class PersonalRadio : Transmitter_Base {
 
 class Pot: Bottle_Base
 {
-    varTemperatureMin=-100;
+    varTemperatureMin=-10;               // -100
 };
 
 class FryingPan: Inventory_Base
 {
-    varTemperatureMin=-100;
+    varTemperatureMin=-10;         // -100
 };
 
 class Heatpack: Inventory_Base
 {
-    varTemperatureMin=-100;
+    varTemperatureMin= 26;
+    varTemperatureMax= 90;
 };

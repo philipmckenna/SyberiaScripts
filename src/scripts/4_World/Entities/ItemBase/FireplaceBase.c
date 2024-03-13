@@ -1,10 +1,10 @@
 modded class FireplaceBase
 {
-	const float PARAM_FULL_HEAT_RADIUS = 2.0;
-	const float PARAM_HEAT_RADIUS = 4.0;
+	const float PARAM_FULL_HEAT_RADIUS = 3.0;
+	const float PARAM_HEAT_RADIUS = 5.0;
 	const float PARAM_HEAT_THROUGH_AIR_COEF	= 0.035;
 	const float PARAM_HEAT_ITEM_COEF = 5.0;
-	const float PARAM_HEAT_ITEM_MAX_TEMP = 40.0;
+	const float PARAM_HEAT_ITEM_MAX_TEMP = 60.0;
 	
 	override protected void TransferHeatToNearPlayers()
 	{

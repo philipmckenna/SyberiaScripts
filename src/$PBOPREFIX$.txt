@@ -1,0 +1,5 @@
+//<'SyberiaScripts.pbo' properties via Mikero's dos tools, dll version 9.10>
+product=dayz ugc;
+prefix=SyberiaScripts;
+//PboType=Arma Addon;
+//</properties>

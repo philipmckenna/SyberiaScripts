@@ -82,3 +82,84 @@ class MeleeBrassKnuckles_Heavy: MeleeBrassKnuckles
         };
     };
 };
+
+class MeleeSpear: MeleeDamage
+{
+	class DamageApplied
+	{
+		type="Melee";
+		bleedThreshold=1;
+		class Health
+		{
+		damage=10;
+		};
+		class Blood
+		{
+		damage=50;
+		};
+		class Shock
+		{
+		damage=15;
+		};
+	};
+};
+
+class MeleeSpear_Heavy: MeleeSpear
+{
+	class DamageApplied
+	{
+		type="Melee";
+		class Health
+		{
+		damage=15;
+		};
+		class Blood
+		{
+		damage=50;
+		};
+		class Shock
+		{
+		damage=20;
+		};
+	};
+};
+
+class MeleeBluntStick: MeleeDamage
+{
+	class DamageApplied
+	{
+	    type="Melee";
+	    class Health
+	    {
+		damage=8;
+		};
+		class Blood
+		{
+		damage=0;
+		};
+		class Shock
+		{
+		damage=10;
+		};
+	};
+};
+
+class MeleeBluntStick_Heavy: MeleeBluntStick
+{
+	class DamageApplied
+	{
+		type="Melee";
+		class Health
+		{
+		damage=12;
+		};
+		class Blood
+		{
+		damage=0;
+		};
+		class Shock
+		{
+		damage=15;
+		};
+	};
+};
